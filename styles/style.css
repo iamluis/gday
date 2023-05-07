@@ -202,15 +202,16 @@ h6 {
 }
 
 .left::after {
-    content: url(/assets/line.svg);
+    content: url(/assets/line-foot.svg);
     position: relative;
-    top: 50px;
+    top: 40px;
+    left: -5px;
 }
 
 .right::before {
-    content: url(/assets/line.svg);
+    content: url(/assets/line-foot.svg);
     position: relative;
     transform: scaleX(-1);
     top: 50px;
-    right: 10px;
+    right: -5px;
 }
