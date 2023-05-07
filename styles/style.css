@@ -191,3 +191,22 @@ h6 {
 .bottom-height {
     height: 50px;
 }
+
+.line {
+    position: relative;
+    top: 50px;
+}
+
+.left::after {
+    content: url(/assets/line.svg);
+    position: relative;
+    top: 50px;
+}
+
+.right::before {
+    content: url(/assets/line.svg);
+    position: relative;
+    transform: scaleX(-1);
+    top: 50px;
+    right: 10px;
+}
