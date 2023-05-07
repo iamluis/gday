@@ -187,3 +187,7 @@ h6 {
 .right {
     justify-content: flex-end;
 }
+
+.bottom-height {
+    height: 50px;
+}
