@@ -202,23 +202,15 @@ h6 {
 }
 
 .left::after {
-    content: url(/assets/footprints.svg);
+    content: url(/assets/line.svg);
     position: relative;
-    transform: scale(-0.08, -0.08) rotate(335deg);
-    transform-origin: center;
-    height: 10px;
-    width: 10px;
-    top: 150px;
-    left: 110px;
+    top: 50px;
 }
 
 .right::before {
-    content: url(/assets/footprints.svg);
+    content: url(/assets/line.svg);
     position: relative;
-    transform: scale(0.08, -0.08) rotate(335deg);
-    transform-origin: center;
-    height: 10px;
-    width: 10px;
-    top: 150px;
-    right: 110px;
+    transform: scaleX(-1);
+    top: 50px;
+    right: 10px;
 }
