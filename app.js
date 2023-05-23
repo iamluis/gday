@@ -18,7 +18,6 @@ const firebaseConfig = {
 
 
 // Initialize Firebase
-
 const app = initializeApp(firebaseConfig);
 getAnalytics(app);
 const auth = getAuth(app);
@@ -28,22 +27,21 @@ const initialize = async (user) => {
     const userDataDoc = doc(db, "users", user.email)
     window.userDataDoc = userDataDoc;
     const userData = await getDoc(userDataDoc);
-
     if (userData.exists()) {
         const data = userData.data();
+        window.userData = data;
         if (data.passedStart && location.pathname !== "/itinerary/") {
             location.assign("/itinerary");
         } else if (!data.passedStart && location.pathname !== "/") {
             location.assign("/");
         }
-    }
-    
+    } 
 }
 
 auth.onAuthStateChanged(function (user) {
     if (location.pathname !== "/login/") {
         if (user == null) {
-            location.assign("/login");
+            location.assign("/login/");
         } else {
             initialize(user);
         }
